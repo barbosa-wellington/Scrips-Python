@@ -17,11 +17,18 @@ print('Longitude: ', lon)
 # Identificando no mapa a possição da space
 
 screen = turtle.Screen()
-screen.setup(1200, 600)
+screen.setup(1336, 640)
 #screen.bgcolor("blue")
-#screen.done()
 screen.setworldcoordinates(-180,-90, 180, 90)
 screen.bgpic('world-map.png')
+
+# This command will create a turtle shape on the map
+astronalt = turtle.Turtle()
+print(type(astronalt))
+astronalt.shape("turtle")
+astronalt.setheading(100)
+astronalt.penup()
+astronalt.goto(lon, lat)
 
 #import ImageTk, Image
 #img = ImageTk.PhotoImage(Image.open("worldmap.png"))  
